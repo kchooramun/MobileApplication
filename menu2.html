@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1"> 
+	<link rel="stylesheet" href="jquery.mobile-1.4.5.css">
+	<title>UTM</title>
+	<script src="jquery.js"></script>
+	<script src="jquery.mobile-1.4.5.js"></script>
+	<meta charset="utf-8">
+	<style>
+	/* Adjust the width of the left reveal menu. */
+	#demo-page #left-panel.ui-panel {
+		width: 15em;
+	}
+	#demo-page #left-panel.ui-panel-closed {
+		width: 0;
+	}
+	#demo-page .ui-panel-page-content-position-left,
+	.ui-panel-dismiss-open.ui-panel-dismiss-position-left {
+		left: 15em;
+		right: -15em;
+	}
+	#demo-page .ui-panel-animate.ui-panel-page-content-position-left.ui-panel-page-content-display-reveal {
+		left: 0;
+		right: 0;
+		-webkit-transform: translate3d(15em,0,0);
+		-moz-transform: translate3d(15em,0,0);
+		transform: translate3d(15em,0,0);
+	}
+	/* Listview with collapsible list items. */
+	.ui-listview > li .ui-collapsible-heading {
+		margin: 0;
+	}
+	.ui-collapsible.ui-li-static {
+		padding: 0;
+		border: none !important;
+	}
+	.ui-collapsible + .ui-collapsible > .ui-collapsible-heading > .ui-btn {
+		border-top: none !important;
+	}
+	/* Nested list button colors */
+	.ui-listview .ui-listview .ui-btn {
+		background: #fff;
+	}
+	.ui-listview .ui-listview .ui-btn:hover {
+		background: #f5f5f5;
+	}
+	.ui-listview .ui-listview .ui-btn:active {
+		background: #f1f1f1;
+	}
+	/* Reveal panel shadow on top of the listview menu (only to be used if you don't use fixed toolbars) */
+	#demo-page .ui-panel-display-reveal {
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+	}
+	#demo-page .ui-panel-page-content-position-left {
+		-webkit-box-shadow: -5px 0px 5px rgba(0,0,0,.15);
+		-moz-box-shadow: -5px 0px 5px rgba(0,0,0,.15);
+		box-shadow: -5px 0px 5px rgba(0,0,0,.15);
+	}
+	/* Setting a custom background image. */
+	#demo-page.ui-page-theme-a,
+	#demo-page .ui-panel-wrapper {
+		background-color: #fff;
+		background-image: url("../_assets/img/bg-pattern.png");
+		background-repeat: repeat-x;
+		background-position: left bottom;
+	}
+	/* Styling of the page contents */
+	.article p {
+		margin: 0 0 1em;
+		line-height: 1.5;
+	}
+	.article p img {
+		max-width: 100%;
+	}
+	.article p:first-child {
+		text-align: center;
+	}
+	.article small {
+		display: block;
+		font-size: 75%;
+		color: #c0c0c0;
+	}
+	.article p:last-child {
+		text-align: right;
+	}
+	.article a.ui-btn {
+		margin-right: 2em;
+	}
+	@media all and (min-width:769px) {
+		.article {
+			max-width: 994px;
+			margin: 0 auto;
+			padding-top: 4em;
+			-webkit-column-count: 2;
+			-moz-column-count: 2;
+			column-count: 2;
+			-webkit-column-gap: 2em;
+			-moz-column-gap: 2em;
+			column-gap: 2em;
+		}
+    /* Fix for issue with buttons and form elements
+    if CSS columns are used on a page with a panel. */
+    .article a.ui-btn {
+    	-webkit-transform: translate3d(0,0,0);
+    }
+}
+</style>
+</head> 
+<body>
+	<div data-role="page" id="demo-page" data-url="demo-page">
+		<div data-role="header">
+			<h1>University of Technology, Mauritius</h1>
+			<a href="#left-panel" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false">Menu</a>
+			<a href="#add-form" data-icon="gear" data-iconpos="notext">Add</a>
+		</div><!-- /header -->
+		<div role="main" class="ui-content">
+			<div role="main" class="ui-content jqm-content jqm-fullwidth">
+
+				<div class="ui-grid-a">
+					<img src="images/im.jpg" style="width:100%"/>
+				</div>
+
+
+				<div class="ui-grid-a">
+					<div class="ui-bar ui-bar-a">
+						<ul data-role="listview" data-inset="true">
+							    <li data-role="list-divider">Friday, October 8, 2010 <span class="ui-li-count">2</span></li>
+							    <li><a href="#">
+								    <h2>Administration</h2>
+								    <p><strong>Application for MCB Scholarship is now open.</strong></p>
+								    <p>Hey everyone. We are please to inform you that the application for MCB Scholarship is now open to all UTM students. Interested Students are requested to download the application form and submit it before friday.<br>University of Mauritius, University of Technology, University of Mascareignes and Mahatma Gandhi Institute for the Academic year 2015/2016 and who wish to be considered for Sponsorship by the Mutual Aid Foundation (MAF).</p>
+								        <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+							    </a></li>
+							    <li><a href="#">
+								    <h2>Oracle Team</h2>
+								    <p><strong>Oracle Conference</strong></p>
+								    <p>Building upon the competencies in the Oracle Database 12c OCA certification, the Oracle Certified Professional (OCP) for Oracle Database 12c includes the advanced knowledge and skills required of top-performing database administrators.<br>
+									The process of becoming Oracle Database certified broadens your knowledge and skills by exposing you to a wide array of important database features, functions and tasks. Oracle Database certification teaches you how to perform complex, hands-on activities through labs, study and practice.<br>The Oracle Certified Professional, MySQL 5.6 Database Administrator Certification proves the ability to install and optimize MySQL Server, set up replication and security, perform database backups and performance tuning and protect MySQL databases</p>
+									        <p class="ui-li-aside"><strong>9:18</strong>AM</p>
+								    </a></li>
+								    <li data-role="list-divider">Thursday, October 7, 2010 <span class="ui-li-count">1</span></li>
+								    <li><a href="#">
+									    <h2>Microsoft Team</h2>
+									    <p><strong>Join Microsoft Student Partners Mauritius</strong></p>
+									    <p>Microsoft Student Partners (MSPs) are student technology leaders, empowered to build Microsoft communities on their campus and share their deep knowledge and passion for technology with their fellow classmates.<br>The MSP programme also focuses on evangelizing about technology and how it make our lives simpler - or just more fun. What better way to do this than through events, activities and the occasional goodies!
+									Take a peek at some of our recent events. </p>
+									        <p class="ui-li-aside"><strong>4:48</strong>PM</p>
+								    </a></li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div><!-- /content -->
+			<div data-role="panel" id="left-panel">
+				<ul data-role="listview">
+					<li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
+					<li data-icon="back"><a href="menu2.html" data-rel="back">Home</a></li>
+					<li data-role="collapsible" data-inset="false" data-iconpos="right">
+						<h3>Programmes</h3>
+						<ul data-role="listview">
+							<li><a href="#"><i>Bsc Applied Computing</i></a></li>
+							<li><a href="#"><i>Bsc Software Engineering</i></a></li>
+							<li><a href="#"><i>Bsc Computer Science</i></a></li>
+							<li><a href="#"><i>Bsc Law & Management</i></a></li>
+						</ul>
+					</li><!-- /collapsible -->
+					<li data-role="collapsible" data-inset="false" data-iconpos="right">
+						<h3>Schools</h3>
+						<ul data-role="listview">
+							<li><a href="#"><i>SITE</i></a></li>
+							<li><a href="#"><i>SBMF</i></a></li>
+							<li><a href="#"><i>SSDT</i></a></li>
+							<li><a href="#"><i>SHS</i></a></li>
+						</ul>
+					</li><!-- /collapsible -->
+					<li data-role="collapsible" data-inset="false" data-iconpos="right">
+						<h3>Student</h3>
+						<ul data-role="listview">
+							<li><a href="#"><i>Bus Pass</i></a></li>
+							<li><a href="#"><i>Timetable</i></a></li>
+							<li><a href="#"><i>Query</i></a></li>
+						</ul>
+					</li>
+					<li data-role="collapsible" data-inset="false" data-iconpos="right">
+						<h3>Student Corner</h3>
+						<ul data-role="listview">
+							<li><a href="#"><i>Scholarship</i></a></li>
+							<li><a href="#"><i>Student Results</i></a></li>
+							<li><a href="#"><i>Student Email</i></a></li>
+						</ul>
+					</li>
+					<li><a href="#">Research</a></li>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">News</a></li>
+					<li><a href="MyApplicationForm.html">Apply Now</a></li>
+					<!-- /collapsible -->
+				</ul>
+			</div><!-- /panel -->
+			<div data-role="panel" data-position="right" data-position-fixed="true" data-display="overlay" data-theme="a" id="add-form">
+				<form class="userform">
+					<h2>Login</h2>
+					<label for="name">Username:</label>
+					<input name="name" id="name" value="" data-clear-btn="true" data-mini="true" type="text">
+					<label for="password">Password:</label>
+					<input name="password" id="password" value="" data-clear-btn="true" autocomplete="off" data-mini="true" type="password">
+					<div class="ui-grid-a">
+						<div class="ui-block-a"><a href="#" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-mini">Cancel</a></div>
+						<div class="ui-block-b"><a href="#" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-mini">Save</a></div>
+					</div>
+				</form>
+			</div><!-- /panel -->
+		</div>
+	</body>
+	</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1">	
+	<link rel="stylesheet" href="jquery.mobile-1.4.5.css">
+	<script src="jquery.js"></script>
+	<title>UTM</title>
+	<meta charset="utf-8">
+	<script src="jquery.mobile-1.4.5.js"></script>
+</head>	
+<body>
+
+	<div data-role="page" id="demo-page" data-url="demo-page">
+		<div data-role="header">
+			<h1>University of Technology, Mauritius</h1>
+			<a href="#left-panel" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false">Menu</a>
+			<a href="#add-form" data-icon="gear" data-iconpos="notext">Add</a>
+		</div><!-- /header -->
+		
+		<div role="main" class="ui-content jqm-content jqm-fullwidth">
+			<form method="post" action="demoform.asp" >
+				<div class="ui-field-contain">
+					<h2>Application Form</h2>
+					<label for="fname">First Name:</label>
+					<input type="text" name="fname" id="fname">
+					<label for="lname">Last Name:</label>
+					<input type="text" name="lname" id="lname">
+					<label for="phone">Phone Number:</label>
+					<input type="text" name="phone" id="phone">
+					<label for="email">Email:</label>
+					<input type="text" name="email" id="email">
+					<label for="DOB">Date of Birth:</label>
+					<input type="date" name="date" id="date" placeholder="mm/dd/yyyy">
+
+				</div>
+
+				<div class="ui-field-contain">
+					<fieldset data-role="controlgroup">
+						<legend>Gender:</legend>
+						<input name="radio-choice-v-1" id="radio-choice-v-1a" value="on" checked="checked" type="radio">
+						<label for="radio-choice-v-1a">Male</label>
+						<input name="radio-choice-v-1" id="radio-choice-v-1b" value="off" type="radio">
+						<label for="radio-choice-v-1b">Female</label>
+					</fieldset>
+				</div>
+
+				<select multiple="multiple" data-native-menu="false" name="select-multiple-4" id="select-multiple-4">
+					<option value="">Please choose Programmes</option>
+					<option value="prog1">Prog1</option>
+					<option value="prog2">Prog2</option>
+					<option value="prog3">Prog3</option>
+					<option value="prog4">Prog4</option>
+					<option value="prog5">Prog5</option>
+				</select>
+				<hr/>
+				<br>
+
+				<button class="ui-shadow ui-btn ui-corner-all" type="submit" id="submit-4">Apply</button>
+				<button class="ui-shadow ui-btn ui-corner-all" type="submit" id="submit-4">Clear</button>
+			</form>
+
+		</div><!-- /content -->
+
+		<div data-role="panel" id="left-panel">
+			<ul data-role="listview">
+				<li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
+				<li data-icon="back"><a href="menu2.html">Home</a></li>
+
+				<li data-role="collapsible" data-inset="false" data-iconpos="right">
+					<h3>Programmes</h3>
+					<ul data-role="listview">
+						<li><a href="#"><i>Bsc Applied Computing</i></a></li>
+						<li><a href="#"><i>Bsc Software Engineering</i></a></li>
+						<li><a href="#"><i>Bsc Computer Science</i></a></li>
+						<li><a href="#"><i>Bsc Law & Management</i></a></li>
+					</ul>
+				</li><!-- /collapsible -->
+				<li data-role="collapsible" data-inset="false" data-iconpos="right">
+					<h3>Schools</h3>
+					<ul data-role="listview">
+						<li><a href="#"><i>SITE</i></a></li>
+						<li><a href="#"><i>SBMF</i></a></li>
+						<li><a href="#"><i>SSDT</i></a></li>
+						<li><a href="#"><i>SHS</i></a></li>
+					</ul>
+				</li><!-- /collapsible -->
+				<li data-role="collapsible" data-inset="false" data-iconpos="right">
+					<h3>Student</h3>
+					<ul data-role="listview">
+						<li><a href="#"><i>Bus Pass</i></a></li>
+						<li><a href="#"><i>Timetable</i></a></li>
+						<li><a href="#"><i>Query</i></a></li>
+					</ul>
+				</li>
+				<li data-role="collapsible" data-inset="false" data-iconpos="right">
+					<h3>Student Corner</h3>
+					<ul data-role="listview">
+						<li><a href="#"><i>Scholarship</i></a></li>
+						<li><a href="#"><i>Student Results</i></a></li>
+						<li><a href="#"><i>Student Email</i></a></li>
+					</ul>
+				</li>
+				<li><a href="#">Research</a></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">News</a></li>
+				<li><a href="MyApplicationForm.html">Apply Now</a></li>
+				<!-- /collapsible -->
+			</ul>
+		</div>
+
+		
+		<div data-role="footer" data-position="fixed">
+			<h4>2017 © Copyright All Rights Reserved</h4>
+		</div><!-- /footer -->
+
+		
+
+		
+
+		<div data-role="panel" data-position="right" data-position-fixed="true" data-display="overlay" data-theme="a" id="add-form">
+			<form class="userform">
+				<h2>Login</h2>
+				<label for="name">Username:</label>
+				<input name="name" id="name" value="" data-clear-btn="true" data-mini="true" type="text">
+				<label for="password">Password:</label>
+				<input name="password" id="password" value="" data-clear-btn="true" autocomplete="off" data-mini="true" type="password">
+				<div class="ui-grid-a">
+					<div class="ui-block-a"><a href="#" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-mini">Cancel</a></div>
+					<div class="ui-block-b"><a href="#" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-mini">Save</a></div>
+				</div>
+			</form>
+		</div><!-- /panel -->
+
+
+	</div>
+
+	
+</body>
+</html>
